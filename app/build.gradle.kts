@@ -24,8 +24,8 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-webmvc")
     implementation("org.springframework.boot:spring-boot-devtools")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 }
-
 
 application {
     mainClass = "org.example.spring.Application"
@@ -33,4 +33,42 @@ application {
 
 tasks.named<Test>("test") {
     useJUnitPlatform()
+}
+
+checkstyle {
+    toolVersion = "10.18.1"
+    configFile = file("config/checkstyle/checkstyle.xml")
+    isIgnoreFailures = false
+}
+
+tasks.checkstyleMain {
+    source = fileTree("src/main/java")
+}
+
+tasks.checkstyleTest {
+    source = fileTree("src/test/java")
+}
+
+tasks.jacocoTestReport {
+    reports {
+        xml.required.set(true)
+        html.required.set(true)
+    }
+    dependsOn(tasks.test)
+}
+
+tasks.jacocoTestCoverageVerification {
+    violationRules {
+        rule {
+            limit {
+                minimum = "0.8".toBigDecimal()
+            }
+        }
+    }
+    dependsOn(tasks.jacocoTestReport)
+}
+
+tasks.test {
+    finalizedBy(tasks.jacocoTestReport)
+    finalizedBy(tasks.jacocoTestCoverageVerification)
 }
