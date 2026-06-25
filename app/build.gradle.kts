@@ -77,6 +77,6 @@ tasks.test {
 sonar {
     properties {
         property("sonar.projectKey", "RazdorPaul_MotoService")
-        property("sonar.organization", "razdorpaul") // Если используешь SonarCloud
+        property("sonar.organization", "razdorpau")
     }
 }
