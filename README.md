@@ -1,6 +1,6 @@
 # MotoService
 
-[![CI](https://github.com/RazdorPaul/MotoService/actions/workflows/ci.yml/badge.svg)](https://github.com/RazdorPaul/MotoService/actions/workflows/ci.yml)
+[![CI](https://github.com/RazdorPaul/MotoService/actions/workflows/build.yml/badge.svg)](https://github.com/RazdorPaul/MotoService/actions/workflows/build.yml)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=RazdorPaul_MotoService&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=RazdorPaul_MotoService)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=RazdorPaul_MotoService&metric=coverage)](https://sonarcloud.io/summary/new_code?id=RazdorPaul_MotoService)
 [![Java](https://img.shields.io/badge/Java-21-orange.svg)](https://adoptium.net/)
