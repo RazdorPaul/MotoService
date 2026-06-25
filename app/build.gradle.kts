@@ -3,7 +3,7 @@ plugins {
     id("com.github.ben-manes.versions") version "0.51.0"
     id("org.springframework.boot") version "4.0.6"
     id("io.spring.dependency-management") version "1.1.7"
-    id("org.sonarqube") version "5.1.0.4882"
+    id("org.sonarqube") version "7.3.1.8318"
     application
     checkstyle
     jacoco
