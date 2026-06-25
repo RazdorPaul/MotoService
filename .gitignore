@@ -1,8 +1,6 @@
 # === Build files ===
 .gradle/
 gradle/
-gradlew
-gradlew.bat
 build/
 !**/src/main/**
 !**/src/test/**
